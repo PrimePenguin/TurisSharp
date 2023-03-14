@@ -17,13 +17,22 @@ namespace TurisSharp
         {
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, TurisConsts.OrdersUrl);
         }
-
+        /// <summary>
+        /// Get turis order
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
         public async Task<TurisOrder> GetTurisOrder(long orderId)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
             return await ApiClient.ExecuteAsync<TurisOrder>(HttpMethod.Get, uri);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<string?> UpdateTurisOrder(long orderId, OrderUpdateRequest request)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
