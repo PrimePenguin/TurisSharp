@@ -14,7 +14,7 @@ namespace TurisSharp
 
         public TurisApiClient(string baseUri, string accessToken)
         {
-            BaseUri = baseUri;
+             BaseUri = baseUri;
             _grantType = TurisConsts.GrantType;
             _accessToken = accessToken;
         }
@@ -24,7 +24,7 @@ namespace TurisSharp
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_accessToken}");
-                var requestMessage = new HttpRequestMessage(method, $"{BaseUri}{requestUrl}");
+                var requestMessage = new HttpRequestMessage(method, $"{BaseUri}api/public/v1/{requestUrl}");
 
                 if (data != null)
                 {
