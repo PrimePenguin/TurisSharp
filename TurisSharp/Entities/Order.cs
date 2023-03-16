@@ -96,7 +96,7 @@ namespace TurisSharp.Entities
         public object StripePaymentLink { get; set; }
 
         [JsonProperty("shipping_delivery_term_name")]
-        public string? ShippingDeliveryTermName { get; set; }
+        public string ShippingDeliveryTermName { get; set; }
 
         [JsonProperty("shipping_delivery_term_id")]
         public object ShippingDeliveryTermId { get; set; }
@@ -189,7 +189,7 @@ namespace TurisSharp.Entities
         public string FirstName { get; set; }
 
         [JsonProperty("last_name")]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
 
         [JsonProperty("discount")]
         public long? Discount { get; set; }
@@ -333,7 +333,7 @@ namespace TurisSharp.Entities
 
         [JsonProperty("avatar_color", NullValueHandling = NullValueHandling.Include)]
        // [JsonConverter(typeof(ParseStringConverter))]
-        public string? AvatarColor { get; set; }
+        public string AvatarColor { get; set; }
 
         [JsonProperty("express_ordering")]
         public object ExpressOrdering { get; set; }
@@ -390,7 +390,7 @@ namespace TurisSharp.Entities
         public string Address { get; set; }
 
         [JsonProperty("zip_code")]
-        public string? ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         [JsonProperty("city")]
         public string City { get; set; }
@@ -522,10 +522,10 @@ namespace TurisSharp.Entities
         public string Email { get; set; }
 
         [JsonProperty("first_name")]
-        public string? FirstName { get; set; }
+        public string FirstName { get; set; }
 
         [JsonProperty("last_name")]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -559,10 +559,10 @@ namespace TurisSharp.Entities
         public string City { get; set; }
 
         [JsonProperty("phone_number")]
-        public string? PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [JsonProperty("state")]
-        public string? State { get; set; }
+        public string State { get; set; }
 
         [JsonProperty("company")]
         public Company Company { get; set; }
@@ -622,16 +622,16 @@ namespace TurisSharp.Entities
         public object CreatedAt { get; set; }
 
         [JsonProperty("desired_shipment_date")]
-        public string? DesiredShipmentDate { get; set; }
+        public string DesiredShipmentDate { get; set; }
 
         [JsonProperty("shipment_date")]
-        public string? ShipmentDate { get; set; }
+        public string ShipmentDate { get; set; }
 
         [JsonProperty("do_not_ship_before")]
         public object DoNotShipBefore { get; set; }
 
         [JsonProperty("do_not_ship_after")]
-        public string? DoNotShipAfter { get; set; }
+        public string DoNotShipAfter { get; set; }
 
         [JsonProperty("order_rel_num")]
         public object OrderRelNum { get; set; }
@@ -930,7 +930,7 @@ public class OrderUpdateRequest
         public long ProductId { get; set; }
 
         [JsonProperty("shipment_date")]
-        public string? ShipmentDate { get; set; }
+        public string ShipmentDate { get; set; }
 
         [JsonProperty("is_shipped")]
         public bool IsShipped { get; set; }
@@ -939,10 +939,10 @@ public class OrderUpdateRequest
         public long Quantity { get; set; }
 
         [JsonProperty("do_not_ship_after")]
-        public string? DoNotShipAfter { get; set; }
+        public string DoNotShipAfter { get; set; }
 
         [JsonProperty("desired_shipment_date")]
-        public string? DesiredShipmentDate { get; set; }
+        public string DesiredShipmentDate { get; set; }
     }
 
     public enum StatusIdEnum

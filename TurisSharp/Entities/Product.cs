@@ -22,45 +22,43 @@ namespace TurisSharp.Entities
         public long Id { get; set; }
 
         [JsonProperty("name")]
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("brand_id")]
         public long? BrandId { get; set; }
 
         [JsonProperty("supplier")]
-        public string? Supplier { get; set; }
+        public string Supplier { get; set; }
 
         [JsonProperty("sku")]
         public string Sku { get; set; }
 
         [JsonProperty("ean")]
-        //[JsonConverter(typeof(ParseStringConverter))]
-        public long? Ean { get; set; }
+        public string Ean { get; set; }
 
         [JsonProperty("hs_code")]
-        //[JsonConverter(typeof(ParseStringConverter))]
-        public long? HsCode { get; set; }
+        public string HsCode { get; set; }
 
         [JsonProperty("unit_cost")]
         public double? UnitCost { get; set; }
 
         [JsonProperty("variant_id")]
-        public object VariantId { get; set; }
+        public string VariantId { get; set; }
 
         [JsonProperty("inherit_prices_variant_id")]
-        public object InheritPricesVariantId { get; set; }
+        public string InheritPricesVariantId { get; set; }
 
         [JsonProperty("variant_entity_id")]
-        public object VariantEntityId { get; set; }
+        public string VariantEntityId { get; set; }
 
         [JsonProperty("size_id")]
-        public object SizeId { get; set; }
+        public string SizeId { get; set; }
 
         [JsonProperty("category_id")]
-        public long CategoryId { get; set; }
+        public string CategoryId { get; set; }
 
         [JsonProperty("sub_category_id")]
-        public long? SubCategoryId { get; set; }
+        public string SubCategoryId { get; set; }
 
         [JsonProperty("color")]
         public string Color { get; set; }
@@ -72,7 +70,7 @@ namespace TurisSharp.Entities
         public string Dimensions { get; set; }
 
         [JsonProperty("weight")]
-        public long Weight { get; set; }
+        public string Weight { get; set; }
 
         [JsonProperty("case_volume")]
         public long CaseVolume { get; set; }
@@ -105,10 +103,10 @@ namespace TurisSharp.Entities
         public DateTimeOffset? BackorderBannerDate { get; set; }
 
         [JsonProperty("warehouse_location")]
-        public string? WarehouseLocation { get; set; }
+        public string WarehouseLocation { get; set; }
 
         [JsonProperty("wholesale_prices")]
-        public List<Price>? WholesalePrices { get; set; }
+        public List<Price> WholesalePrices { get; set; }
 
         [JsonProperty("retail_prices")]
         public List<Price> RetailPrices { get; set; }

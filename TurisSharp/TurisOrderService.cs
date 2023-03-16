@@ -33,16 +33,16 @@ namespace TurisSharp
         /// <param name="orderId"></param>
         /// <param name="request"></param>
         /// <returns></returns>
-        public async Task<string?> UpdateTurisOrder(long orderId, OrderUpdateRequest request)
+        public async Task<string> UpdateTurisOrder(long orderId, OrderUpdateRequest request)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
-            return await ApiClient.ExecuteAsync<string?>(HttpMethod.Put, uri, request);
+            return await ApiClient.ExecuteAsync<string>(HttpMethod.Put, uri, request);
         }
          
-        public async Task<string?> UpdateTurisOrderItems(long orderId, UpdateOrderItemsRequest request)
+        public async Task<string> UpdateTurisOrderItems(long orderId, UpdateOrderItemsRequest request)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}/items";
-            return await ApiClient.ExecuteAsync<string?>(HttpMethod.Put, uri, request);
+            return await ApiClient.ExecuteAsync<string>(HttpMethod.Put, uri, request);
         }
 
 
@@ -69,7 +69,7 @@ namespace TurisSharp
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, uri);
         }
 
-        public async Task<string?> DeleteTurisOrder(long orderId)
+        public async Task<string> DeleteTurisOrder(long orderId)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);

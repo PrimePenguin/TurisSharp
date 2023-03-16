@@ -28,7 +28,7 @@ namespace TurisSharp.Entities
         public long ShowProductsIndividually { get; set; }
 
         [JsonProperty("show_variant_options_as")]
-        public string? ShowVariantOptionsAs { get; set; }
+        public string ShowVariantOptionsAs { get; set; }
 
         [JsonProperty("default_entity_id")]
         public object? DefaultEntityId { get; set; }

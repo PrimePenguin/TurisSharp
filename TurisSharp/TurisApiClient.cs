@@ -24,7 +24,7 @@ namespace TurisSharp
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_accessToken}");
-                var requestMessage = new HttpRequestMessage(method, $"{BaseUri}api/public/v1/{requestUrl}");
+                var requestMessage = new HttpRequestMessage(method, $"{BaseUri}{requestUrl}");
 
                 if (data != null)
                 {

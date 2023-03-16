@@ -51,10 +51,10 @@ namespace TurisSharp
             return await ApiClient.ExecuteAsync<TurisProduct>(HttpMethod.Patch, uri, product);
         }
 
-        public async Task<string?> DeleteTurisProduct(long productId)
+        public async Task<string> DeleteTurisProduct(long productId)
         {
             var uri = $"{TurisConsts.ProductsUrl}{productId}";
-            return await ApiClient.ExecuteAsync<string?>(HttpMethod.Delete, uri);
+            return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);
         }
 
     }
