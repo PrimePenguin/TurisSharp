@@ -139,7 +139,7 @@ namespace TurisSharp.Entities
         public long CurrencyId { get; set; }
 
         [JsonProperty("price")]
-        public long? PricePrice { get; set; }
+        public long? UnitPrice { get; set; }
     }
 
     public class SpecialPrice

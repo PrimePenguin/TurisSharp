@@ -18,7 +18,7 @@ namespace TurisSharp.Entities
     public class Subscription
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("event")]
         public string Event { get; set; }

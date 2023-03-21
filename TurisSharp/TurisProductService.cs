@@ -57,5 +57,10 @@ namespace TurisSharp
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);
         }
 
+        public async Task<Currencies> GetCurrencies()
+        { 
+            return await ApiClient.ExecuteAsync<Currencies>(HttpMethod.Get, TurisConsts.CurrencyUrl);
+        }
+
     }
 }

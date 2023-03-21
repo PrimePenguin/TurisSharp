@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Newtonsoft.Json;
 
 namespace TurisSharp.Entities
@@ -23,8 +24,8 @@ namespace TurisSharp.Entities
         [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonProperty("location")]
-        public object Location { get; set; }
+        [JsonProperty("location", NullValueHandling = NullValueHandling.Ignore)]
+        public string Location { get; set; }
 
         [JsonProperty("order_round")]
         public object OrderRound { get; set; }
@@ -66,7 +67,7 @@ namespace TurisSharp.Entities
         public bool IsNew { get; set; }
 
         [JsonProperty("summary")]
-        public  Summary Summary { get; set; }
+        public Summary Summary { get; set; }
 
         [JsonProperty("voucher_percentage_discount")]
         public object VoucherPercentageDiscount { get; set; }
@@ -90,10 +91,11 @@ namespace TurisSharp.Entities
         public bool IsPaid { get; set; }
 
         [JsonProperty("purchase_order_no")]
+        [CanBeNull]
         public string PurchaseOrderNo { get; set; }
 
         [JsonProperty("stripe_payment_link")]
-        public object StripePaymentLink { get; set; }
+        public string StripePaymentLink { get; set; }
 
         [JsonProperty("shipping_delivery_term_name")]
         public string ShippingDeliveryTermName { get; set; }
@@ -228,7 +230,6 @@ namespace TurisSharp.Entities
         public string Address { get; set; }
 
         [JsonProperty("zip_code")]
-       // [JsonConverter(typeof(ParseStringConverter))]
         public long ZipCode { get; set; }
 
         [JsonProperty("city")]
@@ -241,7 +242,6 @@ namespace TurisSharp.Entities
         public long VatTypeId { get; set; }
 
         [JsonProperty("vat_number")]
-       // [JsonConverter(typeof(ParseStringConverter))]
         public long? VatNumber { get; set; }
 
         [JsonProperty("website")]
@@ -332,7 +332,7 @@ namespace TurisSharp.Entities
         public bool? VatExempted { get; set; }
 
         [JsonProperty("avatar_color", NullValueHandling = NullValueHandling.Include)]
-       // [JsonConverter(typeof(ParseStringConverter))]
+        // [JsonConverter(typeof(ParseStringConverter))]
         public string AvatarColor { get; set; }
 
         [JsonProperty("express_ordering")]
@@ -417,7 +417,7 @@ namespace TurisSharp.Entities
         public string LocationName { get; set; }
 
         [JsonProperty("email")]
-        public object Email { get; set; }
+        public string Email { get; set; }
 
         [JsonProperty("country_iso_code")]
         public string CountryIsoCode { get; set; }
@@ -438,7 +438,7 @@ namespace TurisSharp.Entities
         public string Email { get; set; }
 
         [JsonProperty("email_verified_at")]
-        public object EmailVerifiedAt { get; set; }
+        public string EmailVerifiedAt { get; set; }
 
         [JsonProperty("is_admin")]
         public long IsAdmin { get; set; }
@@ -447,25 +447,25 @@ namespace TurisSharp.Entities
         public long CompanyId { get; set; }
 
         [JsonProperty("address")]
-        public object Address { get; set; }
+        public string Address { get; set; }
 
         [JsonProperty("zip_code")]
-        public object ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         [JsonProperty("city")]
-        public object City { get; set; }
+        public string City { get; set; }
 
         [JsonProperty("country")]
-        public object Country { get; set; }
+        public string Country { get; set; }
 
         [JsonProperty("state")]
-        public object State { get; set; }
+        public string State { get; set; }
 
         [JsonProperty("phone_number")]
-        public object PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [JsonProperty("discount")]
-        public object Discount { get; set; }
+        public string Discount { get; set; }
 
         [JsonProperty("logo")]
         public Uri Logo { get; set; }
@@ -483,31 +483,31 @@ namespace TurisSharp.Entities
         public string FirstName { get; set; }
 
         [JsonProperty("last_name")]
-        public object LastName { get; set; }
+        public string LastName { get; set; }
 
         [JsonProperty("is_um")]
         public long IsUm { get; set; }
 
         [JsonProperty("buyer_no")]
-        public object BuyerNo { get; set; }
+        public long? BuyerNo { get; set; }
 
         [JsonProperty("options")]
         public string Options { get; set; }
 
         [JsonProperty("upload_unique_key")]
-        public object UploadUniqueKey { get; set; }
+        public string UploadUniqueKey { get; set; }
 
         [JsonProperty("language_id")]
-        public object LanguageId { get; set; }
+        public string LanguageId { get; set; }
 
         [JsonProperty("is_test_account")]
         public long IsTestAccount { get; set; }
 
         [JsonProperty("session_parent_id")]
-        public object SessionParentId { get; set; }
+        public bool? SessionParentId { get; set; }
 
         [JsonProperty("stripe_id")]
-        public object StripeId { get; set; }
+        public string StripeId { get; set; }
 
         [JsonProperty("resend_set_password_email")]
         public bool ResendSetPasswordEmail { get; set; }
@@ -577,7 +577,7 @@ namespace TurisSharp.Entities
     public class DataItem
     {
         [JsonProperty("group_name")]
-        public object GroupName { get; set; }
+        public string GroupName { get; set; }
 
         [JsonProperty("items")]
         public List<ItemItem> Items { get; set; }
@@ -619,7 +619,7 @@ namespace TurisSharp.Entities
         public long FinalPrice { get; set; }
 
         [JsonProperty("created_at")]
-        public object CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
         [JsonProperty("desired_shipment_date")]
         public string DesiredShipmentDate { get; set; }
@@ -628,13 +628,13 @@ namespace TurisSharp.Entities
         public string ShipmentDate { get; set; }
 
         [JsonProperty("do_not_ship_before")]
-        public object DoNotShipBefore { get; set; }
+        public DateTime? DoNotShipBefore { get; set; }
 
         [JsonProperty("do_not_ship_after")]
         public string DoNotShipAfter { get; set; }
 
         [JsonProperty("order_rel_num")]
-        public object OrderRelNum { get; set; }
+        public string OrderRelNum { get; set; }
 
         [JsonProperty("product")]
         public OrderProduct Product { get; set; }
@@ -685,11 +685,11 @@ namespace TurisSharp.Entities
         public string Sku { get; set; }
 
         [JsonProperty("ean")]
-       // [JsonConverter(typeof(ParseStringConverter))]
+        // [JsonConverter(typeof(ParseStringConverter))]
         public long? Ean { get; set; }
 
         [JsonProperty("hs_code")]
-       // [JsonConverter(typeof(ParseStringConverter))]
+        // [JsonConverter(typeof(ParseStringConverter))]
         public long? HsCode { get; set; }
 
         [JsonProperty("category_id")]
@@ -723,10 +723,10 @@ namespace TurisSharp.Entities
         public long Stock { get; set; }
 
         [JsonProperty("shopify_location_id")]
-        public object ShopifyLocationId { get; set; }
+        public string ShopifyLocationId { get; set; }
 
         [JsonProperty("ignore_shopify_stock_sync")]
-        public object IgnoreShopifyStockSync { get; set; }
+        public string IgnoreShopifyStockSync { get; set; }
 
         [JsonProperty("update_stock_via_erp")]
         public bool UpdateStockViaErp { get; set; }
@@ -756,7 +756,7 @@ namespace TurisSharp.Entities
         public bool IsShown { get; set; }
 
         [JsonProperty("brand_id")]
-        public object BrandId { get; set; }
+        public string BrandId { get; set; }
 
         [JsonProperty("is_hidden")]
         public long IsHidden { get; set; }
@@ -783,7 +783,7 @@ namespace TurisSharp.Entities
         public object Size { get; set; }
 
         [JsonProperty("size_id")]
-        public object SizeId { get; set; }
+        public string SizeId { get; set; }
 
         [JsonProperty("options")]
         public string Options { get; set; }
@@ -894,7 +894,7 @@ namespace TurisSharp.Entities
         public long FeePrice { get; set; }
     }
 
-public class OrderUpdateRequest
+    public class OrderUpdateRequest
     {
         [JsonProperty("comment")]
         public string Comment { get; set; }
@@ -965,6 +965,6 @@ public class OrderUpdateRequest
 }
 
 
-   
+
 
 

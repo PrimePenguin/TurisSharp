@@ -1,7 +1,13 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace TurisSharp.Entities
 {
+    public class Currencies
+    {
+        [JsonProperty("data")]
+        public List<Currency> Currency { get; set; }
+    }
     public class Currency
     {
         [JsonProperty("id")]
@@ -9,17 +15,5 @@ namespace TurisSharp.Entities
 
         [JsonProperty("code")]
         public string Code { get; set; }
-
-        [JsonProperty("is_active")]
-        public long IsActive { get; set; }
-
-        [JsonProperty("default")]
-        public long Default { get; set; }
-
-        [JsonProperty("enabled")]
-        public long Enabled { get; set; }
-
-        [JsonProperty("symbol")]
-        public string Symbol { get; set; }
     }
 }

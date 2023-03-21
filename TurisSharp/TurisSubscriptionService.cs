@@ -24,6 +24,12 @@ namespace TurisSharp
             return await ApiClient.ExecuteAsync<TurisSubscription>(HttpMethod.Get, uri);
         }
 
+        public async Task<string> DeleteTurisSubscription(int subscriptionId)
+        {
+            var uri = $"{TurisConsts.SubscriptionUrl}{subscriptionId}";
+            return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);
+        }
+
         public async Task<TurisSubscription> CreateSubscription(SubscriptionRequest request)
         {
             return await ApiClient.ExecuteAsync<TurisSubscription>(HttpMethod.Post, TurisConsts.SubscriptionUrl, request);

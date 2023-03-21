@@ -10,5 +10,6 @@
         public const string ProductsGroupsUrl = "product-groups/";
         public const string ProductsVariantsUrl = "variants/";
         public const string SubscriptionUrl = "subscriptions/";
+        public const string CurrencyUrl = "currencies/";
     }
 }
