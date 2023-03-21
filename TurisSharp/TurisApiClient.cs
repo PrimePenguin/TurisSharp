@@ -42,6 +42,7 @@ namespace TurisSharp
                 {
                     var exception = JsonConvert.DeserializeObject<TurisException>(result);
                     exception.Message = result;
+                    exception.StatusCode = response.StatusCode;
                     throw exception;
                 }
 

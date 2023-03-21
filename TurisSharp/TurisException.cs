@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Newtonsoft.Json;
 
 namespace TurisSharp
@@ -10,7 +11,10 @@ namespace TurisSharp
 
         [JsonProperty("errors")]
         public Errors Errors { get; set; }
+
+        public HttpStatusCode StatusCode { get; set; }
     }
+
     public class Errors
     {
         [JsonProperty("status")]
