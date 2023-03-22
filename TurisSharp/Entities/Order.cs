@@ -209,7 +209,7 @@ namespace TurisSharp.Entities
         public string Name { get; set; }
 
         [JsonProperty("reg_no")]
-        public object RegNo { get; set; }
+        public string RegNo { get; set; }
 
         [JsonProperty("company_slug")]
         public string CompanySlug { get; set; }
@@ -218,10 +218,10 @@ namespace TurisSharp.Entities
         public string Country { get; set; }
 
         [JsonProperty("state")]
-        public object State { get; set; }
+        public string State { get; set; }
 
         [JsonProperty("tz")]
-        public object Tz { get; set; }
+        public string Tz { get; set; }
 
         [JsonProperty("email")]
         public string Email { get; set; }
@@ -236,31 +236,31 @@ namespace TurisSharp.Entities
         public string City { get; set; }
 
         [JsonProperty("phone_number")]
-        public object PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [JsonProperty("vat_type_id")]
-        public long VatTypeId { get; set; }
+        public long? VatTypeId { get; set; }
 
         [JsonProperty("vat_number")]
         public long? VatNumber { get; set; }
 
         [JsonProperty("website")]
-        public object Website { get; set; }
+        public string Website { get; set; }
 
         [JsonProperty("special_price_list_id")]
-        public object SpecialPriceListId { get; set; }
+        public string SpecialPriceListId { get; set; }
 
         [JsonProperty("discount")]
-        public object Discount { get; set; }
+        public long? Discount { get; set; }
 
         [JsonProperty("payment")]
-        public object Payment { get; set; }
+        public string Payment { get; set; }
 
         [JsonProperty("currency_id")]
-        public long CurrencyId { get; set; }
+        public long? CurrencyId { get; set; }
 
         [JsonProperty("allow_users")]
-        public long AllowUsers { get; set; }
+        public long? AllowUsers { get; set; }
 
         [JsonProperty("logo")]
         public Uri Logo { get; set; }
@@ -278,19 +278,19 @@ namespace TurisSharp.Entities
         public string CustomerNo { get; set; }
 
         [JsonProperty("is_customer_contractor")]
-        public long IsCustomerContractor { get; set; }
+        public bool? IsCustomerContractor { get; set; }
 
         [JsonProperty("order_confirmation_email")]
-        public object OrderConfirmationEmail { get; set; }
+        public string OrderConfirmationEmail { get; set; }
 
         [JsonProperty("shipping_delivery_terms_id")]
-        public object ShippingDeliveryTermsId { get; set; }
+        public string ShippingDeliveryTermsId { get; set; }
 
         [JsonProperty("forwarder_name")]
-        public object ForwarderName { get; set; }
+        public string ForwarderName { get; set; }
 
         [JsonProperty("contract_no")]
-        public object ContractNo { get; set; }
+        public int? ContractNo { get; set; }
 
         [JsonProperty("options")]
         public string Options { get; set; }
@@ -299,16 +299,16 @@ namespace TurisSharp.Entities
         public string RecargoDeEquivalencia { get; set; }
 
         [JsonProperty("free_shipping_limit")]
-        public object FreeShippingLimit { get; set; }
+        public int? FreeShippingLimit { get; set; }
 
         [JsonProperty("language_id")]
-        public object LanguageId { get; set; }
+        public int? LanguageId { get; set; }
 
         [JsonProperty("is_test_account")]
-        public long IsTestAccount { get; set; }
+        public bool? IsTestAccount { get; set; }
 
         [JsonProperty("minimum_order_amount")]
-        public object MinimumOrderAmount { get; set; }
+        public long? MinimumOrderAmount { get; set; }
 
         [JsonProperty("deliveries")]
         public List<DeliveryElement> Deliveries { get; set; }
@@ -807,13 +807,13 @@ namespace TurisSharp.Entities
         public string WarehouseLocation { get; set; }
 
         [JsonProperty("case_quantity_dropshipping")]
-        public object CaseQuantityDropshipping { get; set; }
+        public int? CaseQuantityDropshipping { get; set; }
 
         [JsonProperty("is_dropshipping_free")]
         public bool IsDropshippingFree { get; set; }
 
         [JsonProperty("style_number")]
-        public object StyleNumber { get; set; }
+        public int? StyleNumber { get; set; }
 
         [JsonProperty("default_currency")]
         public DefaultCurrency DefaultCurrency { get; set; }
