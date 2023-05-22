@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<RootNamespace>TurisSharp</RootNamespace>
-		<Version>0.0.9</Version>
+		<Version>0.0.10</Version>
 	</PropertyGroup>
 	<PropertyGroup>
 		<Description>TurisSharp is a C# and .NET library that helps developers easily manage Turis stores.</Description>

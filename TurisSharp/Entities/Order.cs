@@ -10,6 +10,7 @@ namespace TurisSharp.Entities
         [JsonProperty("data")]
         public List<Order> Orders { get; set; }
     }
+
     public class TurisOrder
     {
         [JsonProperty("data")]
@@ -230,7 +231,7 @@ namespace TurisSharp.Entities
         public string Address { get; set; }
 
         [JsonProperty("zip_code")]
-        public long ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         [JsonProperty("city")]
         public string City { get; set; }
