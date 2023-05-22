@@ -51,11 +51,11 @@ namespace TurisSharp
             }
         }
 
-        public async Task<TurisTokenResponse> GetTokenAsync(string baseUrl, string clientId, string clientSecret)
+        public async Task<TurisTokenResponse> GetTokenAsync(string clientId, string clientSecret)
         {
             using (var client = new HttpClient())
             {
-                var uri = new Uri(baseUrl);
+                var uri = new Uri(BaseUri);
                 var requestMessage = new HttpRequestMessage(HttpMethod.Post, $"{uri.Scheme}://{uri.Host}/oauth/token");
                 var body = new
                 {
