@@ -243,7 +243,7 @@ namespace TurisSharp.Entities
         public long? VatTypeId { get; set; }
 
         [JsonProperty("vat_number")]
-        public long? VatNumber { get; set; }
+        public string VatNumber { get; set; }
 
         [JsonProperty("website")]
         public string Website { get; set; }
