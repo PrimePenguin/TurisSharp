@@ -13,18 +13,18 @@ namespace TurisSharp
             ApiClient = new TurisApiClient(baseUrl, accessToken);
         }
 
-        public async Task<TurisSubscriptions> GetTurisSubscriptions()
+        public async Task<TurisSubscriptions> GetSubscriptions()
         {
             return await ApiClient.ExecuteAsync<TurisSubscriptions>(HttpMethod.Get, TurisConsts.SubscriptionUrl);
         }
 
-        public async Task<TurisSubscription> GetTurisSubscription(int subscriptionId)
+        public async Task<TurisSubscription> GetSubscription(int subscriptionId)
         {
             var uri = $"{TurisConsts.SubscriptionUrl}{subscriptionId}";
             return await ApiClient.ExecuteAsync<TurisSubscription>(HttpMethod.Get, uri);
         }
 
-        public async Task<string> DeleteTurisSubscription(int subscriptionId)
+        public async Task<string> DeleteSubscription(int subscriptionId)
         {
             var uri = $"{TurisConsts.SubscriptionUrl}{subscriptionId}";
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);

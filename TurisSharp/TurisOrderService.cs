@@ -13,69 +13,56 @@ namespace TurisSharp
             ApiClient = new TurisApiClient(baseUrl, accessToken);
         }
 
-        public async Task<TurisOrders> GetTurisOrders()
+        public async Task<TurisOrders> GetOrders()
         {
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, TurisConsts.OrdersUrl);
         }
-        /// <summary>
-        /// Get turis order
-        /// </summary>
-        /// <param name="orderId"></param>
-        /// <returns></returns>
-        public async Task<TurisOrder> GetTurisOrder(long orderId)
+
+        public async Task<TurisOrder> GetOrder(long orderId)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
             return await ApiClient.ExecuteAsync<TurisOrder>(HttpMethod.Get, uri);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="orderId"></param>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        public async Task<string> UpdateTurisOrder(long orderId, OrderUpdateRequest request)
+
+        public async Task<string> UpdateOrder(long orderId, OrderUpdateRequest request)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Put, uri, request);
         }
-         
-        public async Task<string> UpdateTurisOrderItems(long orderId, UpdateOrderItemsRequest request)
+
+        public async Task<string> UpdateOrderItems(long orderId, UpdateOrderItemsRequest request)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}/items";
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Put, uri, request);
         }
 
-
-        public async Task<TurisOrder> CreateTurisOrder(CreateOrderRequest request)
+        public async Task<TurisOrder> CreateOrder(CreateOrderRequest request)
         {
-           return await ApiClient.ExecuteAsync<TurisOrder>(HttpMethod.Put, TurisConsts.OrdersUrl, request);
+            return await ApiClient.ExecuteAsync<TurisOrder>(HttpMethod.Put, TurisConsts.OrdersUrl, request);
         }
 
-        public async Task<TurisOrders> GetTurisOrdersByStatus(int statusId)
+        public async Task<TurisOrders> GetOrdersByStatus(int statusId)
         {
             var uri = $"{TurisConsts.OrdersUrl}status/{statusId}";
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, uri);
         }
 
-        public async Task<TurisOrders> GetTurisOrdersByDateOfCreation(long fromDate, long toDate)
+        public async Task<TurisOrders> GetOrdersByDateOfCreation(long fromDate, long toDate)
         {
             var uri = $"{TurisConsts.OrdersUrl}created/{fromDate}/{toDate}";
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, uri);
         }
 
-        public async Task<TurisOrders> GetTurisOrdersByDateOfUpdation(long fromDate, long toDate)
+        public async Task<TurisOrders> GetOrdersByDateOfUpdation(long fromDate, long toDate)
         {
             var uri = $"{TurisConsts.OrdersUrl}updated/{fromDate}/{toDate}";
             return await ApiClient.ExecuteAsync<TurisOrders>(HttpMethod.Get, uri);
         }
 
-        public async Task<string> DeleteTurisOrder(long orderId)
+        public async Task<string> DeleteOrder(long orderId)
         {
             var uri = $"{TurisConsts.OrdersUrl}{orderId}";
             return await ApiClient.ExecuteAsync<string>(HttpMethod.Delete, uri);
         }
-
-
-
     }
 }

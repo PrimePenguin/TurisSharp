@@ -44,7 +44,7 @@ namespace TurisSharp.Entities
         public long ItemsCount { get; set; }
 
         [JsonProperty("cases_count")]
-        public long CasesCount { get; set; }
+        public long? CasesCount { get; set; }
 
         [JsonProperty("created_at")]
         public DateTimeOffset CreatedAt { get; set; }
@@ -53,16 +53,16 @@ namespace TurisSharp.Entities
         public DateTimeOffset? UpdatedAt { get; set; }
 
         [JsonProperty("vat")]
-        public long Vat { get; set; }
+        public long? Vat { get; set; }
 
         [JsonProperty("rec_equiv")]
-        public long RecEquiv { get; set; }
+        public long? RecEquiv { get; set; }
 
         [JsonProperty("show_rec_equiv")]
         public bool ShowRecEquiv { get; set; }
 
         [JsonProperty("shipping_total")]
-        public long ShippingTotal { get; set; }
+        public long? ShippingTotal { get; set; }
 
         [JsonProperty("is_new")]
         public bool IsNew { get; set; }
@@ -147,7 +147,7 @@ namespace TurisSharp.Entities
         public object DropshippingCurrency { get; set; }
 
         [JsonProperty("grand_total")]
-        public long GrandTotal { get; set; }
+        public long? GrandTotal { get; set; }
 
         [JsonProperty("company_name")]
         public string CompanyName { get; set; }
@@ -162,7 +162,7 @@ namespace TurisSharp.Entities
         public string Email { get; set; }
 
         [JsonProperty("is_admin")]
-        public long IsAdmin { get; set; }
+        public long? IsAdmin { get; set; }
 
         [JsonProperty("address")]
         public object Address { get; set; }
@@ -204,7 +204,7 @@ namespace TurisSharp.Entities
     public class Company
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -352,19 +352,19 @@ namespace TurisSharp.Entities
     public class CompanyCurrency
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
 
         [JsonProperty("is_active")]
-        public long IsActive { get; set; }
+        public long? IsActive { get; set; }
 
         [JsonProperty("default")]
-        public long Default { get; set; }
+        public long? Default { get; set; }
 
         [JsonProperty("enabled")]
-        public long Enabled { get; set; }
+        public long? Enabled { get; set; }
 
         [JsonProperty("symbol")]
         public string Symbol { get; set; }
@@ -373,10 +373,10 @@ namespace TurisSharp.Entities
     public class DeliveryElement
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("company_id")]
-        public long CompanyId { get; set; }
+        public long? CompanyId { get; set; }
 
         [JsonProperty("company_name")]
         public string CompanyName { get; set; }
@@ -430,7 +430,7 @@ namespace TurisSharp.Entities
     public class BuyerData
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -442,10 +442,10 @@ namespace TurisSharp.Entities
         public string EmailVerifiedAt { get; set; }
 
         [JsonProperty("is_admin")]
-        public long IsAdmin { get; set; }
+        public long? IsAdmin { get; set; }
 
         [JsonProperty("company_id")]
-        public long CompanyId { get; set; }
+        public long? CompanyId { get; set; }
 
         [JsonProperty("address")]
         public string Address { get; set; }
@@ -487,7 +487,7 @@ namespace TurisSharp.Entities
         public string LastName { get; set; }
 
         [JsonProperty("is_um")]
-        public long IsUm { get; set; }
+        public long? IsUm { get; set; }
 
         [JsonProperty("buyer_no")]
         public long? BuyerNo { get; set; }
@@ -502,7 +502,7 @@ namespace TurisSharp.Entities
         public string LanguageId { get; set; }
 
         [JsonProperty("is_test_account")]
-        public long IsTestAccount { get; set; }
+        public long? IsTestAccount { get; set; }
 
         [JsonProperty("session_parent_id")]
         public bool? SessionParentId { get; set; }
@@ -550,7 +550,6 @@ namespace TurisSharp.Entities
         public string Address { get; set; }
 
         [JsonProperty("zip_code")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public string ZipCode { get; set; }
 
         [JsonProperty("country")]
@@ -587,25 +586,25 @@ namespace TurisSharp.Entities
     public class ItemItem
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("line_no")]
-        public long LineNo { get; set; }
+        public long? LineNo { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonProperty("price")]
-        public long Price { get; set; }
+        public long? Price { get; set; }
 
         [JsonProperty("quantity")]
-        public long Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         [JsonProperty("cases")]
-        public long Cases { get; set; }
+        public long? Cases { get; set; }
 
         [JsonProperty("case_quantity_preserved")]
-        public long CaseQuantityPreserved { get; set; }
+        public long? CaseQuantityPreserved { get; set; }
 
         [JsonProperty("discount")]
         public Discount Discount { get; set; }
@@ -614,10 +613,10 @@ namespace TurisSharp.Entities
         public Discount FinalDiscount { get; set; }
 
         [JsonProperty("total_price")]
-        public long TotalPrice { get; set; }
+        public long? TotalPrice { get; set; }
 
         [JsonProperty("final_price")]
-        public long FinalPrice { get; set; }
+        public long? FinalPrice { get; set; }
 
         [JsonProperty("created_at")]
         public DateTime? CreatedAt { get; set; }
@@ -644,7 +643,7 @@ namespace TurisSharp.Entities
         public List<object> ProductTranslations { get; set; }
 
         [JsonProperty("is_shipped")]
-        public long IsShipped { get; set; }
+        public long? IsShipped { get; set; }
 
         [JsonProperty("amountOrders")]
         public object AmountOrders { get; set; }
@@ -653,19 +652,19 @@ namespace TurisSharp.Entities
         public object UnitsOrdered { get; set; }
 
         [JsonProperty("specialTaxListRate")]
-        public long SpecialTaxListRate { get; set; }
+        public long? SpecialTaxListRate { get; set; }
 
         [JsonProperty("specialTaxSpainListRate")]
-        public long SpecialTaxSpainListRate { get; set; }
+        public long? SpecialTaxSpainListRate { get; set; }
     }
 
     public class Discount
     {
         [JsonProperty("discount")]
-        public long DiscountDiscount { get; set; }
+        public long? DiscountDiscount { get; set; }
 
         [JsonProperty("amount")]
-        public long Amount { get; set; }
+        public long? Amount { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -674,7 +673,7 @@ namespace TurisSharp.Entities
     public class OrderProduct
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -694,7 +693,7 @@ namespace TurisSharp.Entities
         public long? HsCode { get; set; }
 
         [JsonProperty("category_id")]
-        public long CategoryId { get; set; }
+        public long? CategoryId { get; set; }
 
         [JsonProperty("sub_category_id")]
         public long? SubCategoryId { get; set; }
@@ -709,19 +708,19 @@ namespace TurisSharp.Entities
         public string Dimensions { get; set; }
 
         [JsonProperty("weight")]
-        public long Weight { get; set; }
+        public long? Weight { get; set; }
 
         [JsonProperty("weight_type_id")]
         public long? WeightTypeId { get; set; }
 
         [JsonProperty("case_volume")]
-        public long CaseVolume { get; set; }
+        public long? CaseVolume { get; set; }
 
         [JsonProperty("case_volume_type_id")]
         public long? CaseVolumeTypeId { get; set; }
 
         [JsonProperty("stock")]
-        public long Stock { get; set; }
+        public long? Stock { get; set; }
 
         [JsonProperty("shopify_location_id")]
         public string ShopifyLocationId { get; set; }
@@ -736,19 +735,19 @@ namespace TurisSharp.Entities
         public bool AllowBackorders { get; set; }
 
         [JsonProperty("case_quantity")]
-        public long CaseQuantity { get; set; }
+        public long? CaseQuantity { get; set; }
 
         [JsonProperty("case_quantity_method_id")]
-        public long CaseQuantityMethodId { get; set; }
+        public long? CaseQuantityMethodId { get; set; }
 
         [JsonProperty("unit_of_measure_id")]
-        public long UnitOfMeasureId { get; set; }
+        public long? UnitOfMeasureId { get; set; }
 
         [JsonProperty("unit_cost")]
         public long? UnitCost { get; set; }
 
         [JsonProperty("sales_price")]
-        public long SalesPrice { get; set; }
+        public long? SalesPrice { get; set; }
 
         [JsonProperty("description")]
         public string Description { get; set; }
@@ -760,7 +759,7 @@ namespace TurisSharp.Entities
         public string BrandId { get; set; }
 
         [JsonProperty("is_hidden")]
-        public long IsHidden { get; set; }
+        public long? IsHidden { get; set; }
 
         [JsonProperty("created_at")]
         public DateTimeOffset CreatedAt { get; set; }
@@ -769,13 +768,13 @@ namespace TurisSharp.Entities
         public DateTimeOffset? UpdatedAt { get; set; }
 
         [JsonProperty("is_new")]
-        public long IsNew { get; set; }
+        public long? IsNew { get; set; }
 
         [JsonProperty("variant_id")]
-        public long VariantId { get; set; }
+        public long? VariantId { get; set; }
 
         [JsonProperty("variant_entity_id")]
-        public long VariantEntityId { get; set; }
+        public long? VariantEntityId { get; set; }
 
         [JsonProperty("inherit_prices_variant_id")]
         public object InheritPricesVariantId { get; set; }
@@ -799,7 +798,7 @@ namespace TurisSharp.Entities
         public object VolumeFob { get; set; }
 
         [JsonProperty("position")]
-        public long Position { get; set; }
+        public long? Position { get; set; }
 
         [JsonProperty("backorder_banner_date")]
         public DateTimeOffset? BackorderBannerDate { get; set; }
@@ -832,7 +831,7 @@ namespace TurisSharp.Entities
     public class DefaultCurrency
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
@@ -844,7 +843,7 @@ namespace TurisSharp.Entities
     public class Tag
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -856,43 +855,43 @@ namespace TurisSharp.Entities
     public class Summary
     {
         [JsonProperty("items_total_price")]
-        public long ItemsTotalPrice { get; set; }
+        public long? ItemsTotalPrice { get; set; }
 
         [JsonProperty("discount")]
-        public long Discount { get; set; }
+        public long? Discount { get; set; }
 
         [JsonProperty("discount_price")]
-        public long DiscountPrice { get; set; }
+        public long? DiscountPrice { get; set; }
 
         [JsonProperty("shipping_price")]
-        public long ShippingPrice { get; set; }
+        public long? ShippingPrice { get; set; }
 
         [JsonProperty("sub_total_price")]
-        public long SubTotalPrice { get; set; }
+        public long? SubTotalPrice { get; set; }
 
         [JsonProperty("vat_rate")]
-        public long VatRate { get; set; }
+        public long? VatRate { get; set; }
 
         [JsonProperty("vat_price")]
-        public long VatPrice { get; set; }
+        public long? VatPrice { get; set; }
 
         [JsonProperty("rec_equiv_rate")]
-        public long RecEquivRate { get; set; }
+        public long? RecEquivRate { get; set; }
 
         [JsonProperty("show_vat_percantage")]
-        public long ShowVatPercantage { get; set; }
+        public long? ShowVatPercantage { get; set; }
 
         [JsonProperty("rec_equiv_price")]
-        public long RecEquivPrice { get; set; }
+        public long? RecEquivPrice { get; set; }
 
         [JsonProperty("sub_total_price_without_vat")]
-        public long SubTotalPriceWithoutVat { get; set; }
+        public long? SubTotalPriceWithoutVat { get; set; }
 
         [JsonProperty("grand_total_price")]
-        public long GrandTotalPrice { get; set; }
+        public long? GrandTotalPrice { get; set; }
 
         [JsonProperty("fee_price")]
-        public long FeePrice { get; set; }
+        public long? FeePrice { get; set; }
     }
 
     public class OrderUpdateRequest
@@ -901,7 +900,7 @@ namespace TurisSharp.Entities
         public string Comment { get; set; }
 
         [JsonProperty("status_id")]
-        public long StatusId { get; set; }
+        public long? StatusId { get; set; }
 
         [JsonProperty("external_reference")]
         public string ExternalReference { get; set; }
@@ -928,7 +927,7 @@ namespace TurisSharp.Entities
     public class UpdateOrderItem
     {
         [JsonProperty("product_id")]
-        public long ProductId { get; set; }
+        public long? ProductId { get; set; }
 
         [JsonProperty("shipment_date")]
         public string ShipmentDate { get; set; }
@@ -937,7 +936,7 @@ namespace TurisSharp.Entities
         public bool IsShipped { get; set; }
 
         [JsonProperty("quantity")]
-        public long Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         [JsonProperty("do_not_ship_after")]
         public string DoNotShipAfter { get; set; }
