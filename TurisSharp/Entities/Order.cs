@@ -595,7 +595,7 @@ namespace TurisSharp.Entities
         public string Name { get; set; }
 
         [JsonProperty("price")]
-        public long? Price { get; set; }
+        public decimal? Price { get; set; }
 
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }
@@ -613,10 +613,10 @@ namespace TurisSharp.Entities
         public Discount FinalDiscount { get; set; }
 
         [JsonProperty("total_price")]
-        public long? TotalPrice { get; set; }
+        public decimal? TotalPrice { get; set; }
 
         [JsonProperty("final_price")]
-        public long? FinalPrice { get; set; }
+        public decimal? FinalPrice { get; set; }
 
         [JsonProperty("created_at")]
         public DateTime? CreatedAt { get; set; }
@@ -855,25 +855,25 @@ namespace TurisSharp.Entities
     public class Summary
     {
         [JsonProperty("items_total_price")]
-        public long? ItemsTotalPrice { get; set; }
+        public decimal? ItemsTotalPrice { get; set; }
 
         [JsonProperty("discount")]
-        public long? Discount { get; set; }
+        public decimal? Discount { get; set; }
 
         [JsonProperty("discount_price")]
-        public long? DiscountPrice { get; set; }
+        public decimal? DiscountPrice { get; set; }
 
         [JsonProperty("shipping_price")]
-        public long? ShippingPrice { get; set; }
+        public decimal? ShippingPrice { get; set; }
 
         [JsonProperty("sub_total_price")]
-        public long? SubTotalPrice { get; set; }
+        public decimal? SubTotalPrice { get; set; }
 
         [JsonProperty("vat_rate")]
         public long? VatRate { get; set; }
 
         [JsonProperty("vat_price")]
-        public long? VatPrice { get; set; }
+        public decimal? VatPrice { get; set; }
 
         [JsonProperty("rec_equiv_rate")]
         public long? RecEquivRate { get; set; }
@@ -885,13 +885,13 @@ namespace TurisSharp.Entities
         public long? RecEquivPrice { get; set; }
 
         [JsonProperty("sub_total_price_without_vat")]
-        public long? SubTotalPriceWithoutVat { get; set; }
+        public decimal? SubTotalPriceWithoutVat { get; set; }
 
         [JsonProperty("grand_total_price")]
-        public long? GrandTotalPrice { get; set; }
+        public decimal? GrandTotalPrice { get; set; }
 
         [JsonProperty("fee_price")]
-        public long? FeePrice { get; set; }
+        public decimal? FeePrice { get; set; }
     }
 
     public class OrderUpdateRequest
