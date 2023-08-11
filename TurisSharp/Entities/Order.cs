@@ -490,7 +490,7 @@ namespace TurisSharp.Entities
         public long? IsUm { get; set; }
 
         [JsonProperty("buyer_no")]
-        public long? BuyerNo { get; set; }
+        public object BuyerNo { get; set; }
 
         [JsonProperty("options")]
         public string Options { get; set; }
