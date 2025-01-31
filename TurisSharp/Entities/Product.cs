@@ -155,6 +155,9 @@ namespace TurisSharp.Entities
     {
         [JsonProperty("stock")]
         public int Stock { get; set; }
+
+        [JsonProperty("is_product_free")]
+        public bool? IsProductFree { get; set; }
     }
 }
 
