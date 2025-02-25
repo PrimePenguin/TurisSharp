@@ -543,8 +543,17 @@ namespace TurisSharp.Entities
 
     public class DataDelivery
     {
+        [JsonProperty("id")]
+        public long? Id { get; set; }
+
         [JsonProperty("company_name")]
         public string CompanyName { get; set; }
+
+        [JsonProperty("first_name", NullValueHandling = NullValueHandling.Ignore)]
+        public string FirstName { get; set; }
+
+        [JsonProperty("last_name", NullValueHandling = NullValueHandling.Ignore)]
+        public string LastName { get; set; }
 
         [JsonProperty("address")]
         public string Address { get; set; }
@@ -572,6 +581,12 @@ namespace TurisSharp.Entities
 
         [JsonProperty("country_iso_code_alpha3")]
         public string CountryIsoCodeAlpha3 { get; set; }
+
+        [JsonProperty("location_name")]
+        public string LocationName { get; set; }
+
+        [JsonProperty("email", NullValueHandling = NullValueHandling.Ignore)]
+        public string Email { get; set; }
     }
 
     public class DataItem
